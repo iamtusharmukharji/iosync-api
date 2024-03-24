@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-import schemas
+import app.schemas as schemas
 
 router = APIRouter(prefix='/automation',tags=["Automation"])
 

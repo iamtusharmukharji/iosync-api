@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
 
@@ -10,10 +10,10 @@ class Schedule(BaseModel):
     email:Optional[str] = None
 
 class EditSchedule(BaseModel):
-    topic:Optional[str]
-    payload:Optional[str]
-    qos:Optional[int]
-    trigger:Optional[str]
+    topic:Optional[str] = None
+    payload:Optional[str] = None
+    qos:Optional[int] = -1
+    trigger:Optional[str] = None
     email:Optional[str] = None
 
 class Automate(BaseModel):
